@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0b0d12" />
+    <meta name="description" content="Explosion physics at true scale: pick a blast, choose where you stand, watch what reaches you." />
+    <title>pop-porn</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <script type="module" crossorigin src="./assets/index-BjaXbLFL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D1Bhp8VW.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+
+    <div id="hud" aria-hidden="true">
+      <div class="label num" id="lab-fire"></div>
+      <div class="label num" id="lab-front"></div>
+      <div class="label num" id="lab-cloud"></div>
+      <div class="pin" id="pin-you"><i></i><span>YOU</span><b class="num"></b></div>
+      <div class="scalebar num" id="scalebar"><i></i><span></span></div>
+    </div>
+
+    <header id="top">
+      <button id="pick" class="chip" aria-label="Choose explosive">
+        <span class="cat"></span><span class="name"></span><span class="energy"></span>
+        <svg viewBox="0 0 24 24" class="caret"><path d="M7 10l5 5 5-5" /></svg>
+      </button>
+      <div class="spacer"></div>
+      <button id="toggle-num" class="icon" aria-label="Show or hide numbers">
+        <svg viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4l-2 16M16 4l-2 16" /></svg>
+      </button>
+      <button id="open-settings" class="icon" aria-label="Settings">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" /></svg>
+      </button>
+    </header>
+
+    <div id="clock" class="num"></div>
+
+    <section id="obs" class="card num" aria-live="polite"></section>
+
+    <footer id="setup" class="panel">
+      <p class="blurb"></p>
+      <label class="dist">
+        <span class="dist-label">You stand <b></b> from ground zero</span>
+        <input id="dist" type="range" min="0" max="1000" step="1" />
+      </label>
+      <button id="go" class="big">Detonate</button>
+    </footer>
+
+    <footer id="playbar" class="panel">
+      <button id="replay" class="icon" aria-label="Replay"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5" /></svg></button>
+      <button id="playpause" class="icon" aria-label="Pause"><svg viewBox="0 0 24 24"><path class="pause" d="M8 5v14M16 5v14" /><path class="play" d="M7 5l12 7-12 7z" /></svg></button>
+      <button id="slowmo" class="icon text" aria-label="Slow motion">¼×</button>
+      <button id="newblast" class="icon" aria-label="Back to setup"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button>
+    </footer>
+
+    <section id="result" class="card">
+      <h2></h2>
+      <ul></ul>
+      <div class="row">
+        <button data-act="closer">Closer</button>
+        <button data-act="farther">Farther</button>
+        <button data-act="replay">Replay</button>
+        <button data-act="pick">Another blast</button>
+      </div>
+    </section>
+
+    <div id="sheet-picker" class="sheet" hidden>
+      <div class="sheet-body">
+        <div class="sheet-head"><h2>Choose a blast</h2><button class="icon close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+        <nav class="tabs"></nav>
+        <div class="list"></div>
+      </div>
+    </div>
+
+    <div id="sheet-settings" class="sheet" hidden>
+      <div class="sheet-body">
+        <div class="sheet-head"><h2>Settings</h2><button class="icon close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+        <label class="toggle"><span>Sound</span><input type="checkbox" id="set-sound" /></label>
+        <label class="toggle"><span>Vibration</span><input type="checkbox" id="set-haptics" /></label>
+        <label class="toggle"><span>Show numbers</span><input type="checkbox" id="set-numbers" /></label>
+        <label class="toggle"><span>FPS meter</span><input type="checkbox" id="set-fps" /></label>
+        <div class="seg" id="set-quality">
+          <span>Graphics</span>
+          <button data-q="battery">Battery</button><button data-q="auto">Auto</button><button data-q="high">High</button>
+        </div>
+        <p class="small">Physics: Kinney–Graham (chemical blasts), Brode 1986 (nuclear airblast), Glasstone &amp; Dolan (fireball, clouds, heat). Numbers are estimates for flat open ground on a clear day.</p>
+      </div>
+    </div>
+
+    <div id="splash">
+      <div class="splash-inner">
+        <h1>pop<span>·</span>porn</h1>
+        <p>Explosion physics at true scale.<br />Pick a blast, choose where you stand, watch what reaches you.</p>
+        <button id="start" class="big">Start</button>
+        <p class="small">Sound and vibration on for the full effect.</p>
+      </div>
+    </div>
+
+    <div id="fps" class="num" hidden></div>
+    <div id="error" hidden></div>
+  </body>
+</html>
