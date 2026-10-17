@@ -9,8 +9,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icons/icon-192.png" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <script type="module" crossorigin src="./assets/index-CppUqikg.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CM56MYzt.css">
+    <script type="module" crossorigin src="./assets/index-Djyvwwt6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BArtPowa.css">
   </head>
   <body>
     <canvas id="view"></canvas>
@@ -44,6 +44,7 @@
 
     <footer id="setup" class="panel">
       <p class="blurb"></p>
+      <button id="scene" class="scene-chip"><span>Where</span><b></b><svg viewBox="0 0 24 24" class="caret"><path d="M7 10l5 5 5-5" /></svg></button>
       <label class="dist">
         <span class="dist-label">You stand <b></b> from ground zero</span>
         <input id="dist" type="range" min="0" max="1000" step="1" />
@@ -92,6 +93,13 @@
           <button data-q="battery">Battery</button><button data-q="auto">Auto</button><button data-q="high">High</button>
         </div>
         <p class="small">Physics: Kinney–Graham (chemical blasts), Brode 1986 (nuclear airblast), Glasstone &amp; Dolan (fireball, clouds, heat). Numbers are estimates for flat open ground on a clear day.</p>
+      </div>
+    </div>
+
+    <div id="sheet-scene" class="sheet" hidden>
+      <div class="sheet-body">
+        <div class="sheet-head"><h2>Where does it go off?</h2><button class="icon close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+        <div class="list"></div>
       </div>
     </div>
 
