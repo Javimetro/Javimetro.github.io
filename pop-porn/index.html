@@ -9,8 +9,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icons/icon-192.png" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <script type="module" crossorigin src="./assets/index-CHFu5RFt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BArtPowa.css">
+    <script type="module" crossorigin src="./assets/index-KyCG6lxU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-cSpvk2A4.css">
   </head>
   <body>
     <canvas id="view"></canvas>
@@ -137,6 +137,49 @@
         <p class="small">Sound and vibration on for the full effect.</p>
       </div>
     </div>
+
+    <!-- House mode (the milestone 3 game) -->
+    <div id="hm" hidden>
+      <nav id="hm-pick">
+        <button data-x="c4"><b>C-4</b><span>760 g TNT</span></button>
+        <button data-x="moab"><b>MOAB</b><span>11 t TNT</span></button>
+        <button data-x="minor-scale"><b>Minor Scale</b><span>4 kt TNT</span></button>
+      </nav>
+      <div id="hm-status"><b></b><span></span></div>
+      <div id="hm-tools">
+        <button id="hm-speed" class="tool">1×</button>
+        <button id="hm-fit" class="tool">Fit</button>
+        <button id="hm-rebuild" class="tool">Rebuild</button>
+        <button id="hm-settings" class="icon" aria-label="Settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" /></svg>
+        </button>
+      </div>
+      <div id="hm-fire">
+        <div class="m57" id="hm-m57">
+          <div class="m57-name">M57 firing device</div>
+          <div class="m57-body">
+            <button id="hm-bail" class="bail" aria-label="Safety bail">SAFE</button>
+            <button id="hm-squeeze" class="squeeze" aria-label="Squeeze to fire"><i></i><span>SQUEEZE</span></button>
+          </div>
+          <div class="m57-hint">Flip the safety bail, then squeeze and hold.</div>
+        </div>
+        <div class="bombbay" id="hm-bay">
+          <div class="m57-name">Bomb release · C-130</div>
+          <button id="hm-release" class="release">RELEASE</button>
+          <div class="m57-hint">Falls on the target and goes off on arrival.</div>
+        </div>
+      </div>
+      <div id="hm-inset" hidden></div>
+      <section id="hm-report" hidden>
+        <button class="icon close" id="hm-close" aria-label="Close">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+        <h2>What happened</h2>
+        <dl></dl>
+        <ul></ul>
+      </section>
+    </div>
+    <div id="rotate"><div>Turn your phone sideways<br /><small>This test range is landscape only.</small></div></div>
 
     <div id="fps" class="num" hidden></div>
     <div id="error" hidden></div>
