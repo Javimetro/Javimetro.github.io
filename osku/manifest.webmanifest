@@ -1,0 +1,17 @@
+{
+  "name": "Happy Boom-Day, Osku!",
+  "short_name": "Boom-Day",
+  "description": "A birthday present for Osku: blow up a brick house with real blast physics, rebuild it, repeat.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1b1030",
+  "theme_color": "#1b1030",
+  "icons": [
+    { "src": "osku/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "osku/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "osku/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "osku/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
