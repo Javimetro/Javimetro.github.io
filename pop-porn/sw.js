@@ -1,6 +1,6 @@
 // Generated at build time.
-const CACHE = 'pop-porn-a1abcc51dc';
-const FILES = ["./","./assets/index-Cs0PSl6E.js","./assets/index-CM56MYzt.css","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
+const CACHE = 'pop-porn-f903a70995';
+const FILES = ["./","./assets/index-BDM7_yap.js","./assets/index-CM56MYzt.css","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
