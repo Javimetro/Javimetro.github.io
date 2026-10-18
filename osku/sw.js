@@ -1,6 +1,6 @@
 // Generated at build time.
-const CACHE = 'boom-day-d908a1d0ae';
-const FILES = ["./","./assets/index-CEGPtOgx.js","./assets/index-DfntGsly.css","./assets/press-start-2p-latin-400-normal-KLytu4cr.woff","./assets/press-start-2p-latin-400-normal-_wFEWmAB.woff2","./manifest.webmanifest","./osku/osku-sheet.png","./osku/icon-192.png","./osku/icon-512.png","./osku/icon-maskable-192.png","./osku/icon-maskable-512.png","./osku/favicon-32.png","./osku/favicon-80.png","./osku/apple-touch-icon.png"];
+const CACHE = 'boom-day-f8528ba39f';
+const FILES = ["./","./assets/index-Cogb0UV4.js","./assets/index-C8Dfj_91.css","./assets/press-start-2p-latin-400-normal-KLytu4cr.woff","./assets/press-start-2p-latin-400-normal-_wFEWmAB.woff2","./manifest.webmanifest","./osku/osku-sheet.png","./osku/icon-192.png","./osku/icon-512.png","./osku/icon-maskable-192.png","./osku/icon-maskable-512.png","./osku/favicon-32.png","./osku/favicon-80.png","./osku/apple-touch-icon.png"];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
 });

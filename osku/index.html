@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./osku/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="80x80" href="./osku/favicon-80.png" />
     <link rel="apple-touch-icon" href="./osku/apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/index-CEGPtOgx.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DfntGsly.css">
+    <script type="module" crossorigin src="./assets/index-Cogb0UV4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C8Dfj_91.css">
   </head>
   <body>
     <canvas id="view"></canvas>
@@ -151,10 +151,18 @@
         <button data-x="moab"><b>MOAB</b><span>11 t TNT</span></button>
         <button data-x="minor-scale"><b>Minor Scale</b><span>4 kt TNT</span></button>
       </nav>
+      <nav id="hm-build">
+        <button data-k="house"><b>House</b><span>2 storeys, brick</span></button>
+        <button data-k="tower"><b>Tower</b><span>8 storeys, concrete</span></button>
+        <button data-k="car"><b>Car</b><span>1.4 t saloon</span></button>
+        <button id="hm-clear" class="minor">Clear all</button>
+      </nav>
+      <button id="hm-remove" hidden>Remove</button>
       <div id="hm-status"><b></b><span></span></div>
       <div id="hm-tools">
         <button id="hm-speed" class="tool">1×</button>
         <button id="hm-fit" class="tool">Fit</button>
+        <button id="hm-scene" class="tool">Scene</button>
         <button id="hm-rebuild" class="tool">Rebuild</button>
         <button id="hm-settings" class="icon" aria-label="Settings">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" /></svg>
@@ -162,6 +170,7 @@
       </div>
       <div id="hm-dock">
         <canvas id="hm-osku" aria-hidden="true"></canvas>
+        <button id="hm-ready" class="ready">SCENE READY <small>choose the explosive</small></button>
         <div id="hm-fire">
           <div class="m57" id="hm-m57">
             <div class="m57-name">M57 firing device</div>
